@@ -63,5 +63,6 @@ public class ControllOpIf02 {
 		} else {
 			System.out.println("불합격");
 		}
+		
 	}
 }
