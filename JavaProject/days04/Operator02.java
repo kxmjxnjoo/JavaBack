@@ -44,5 +44,6 @@ public class Operator02 {
 		k = ++n; // 1증가 후에 다른 연산에 참여 = n에 1증가 후 k에 저장
 		System.out.println("k: " + k);
 		System.out.println("n: " + n);
+		
 	}
 }
