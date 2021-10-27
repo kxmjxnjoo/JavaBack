@@ -99,9 +99,18 @@ public class Operator04 {
 		result = (year1%4==0 && year1%100!=0 || year1% 400==0) ;
 		System.out.println("2020년은 윤년이다: " + result);
 		result = (year2%4==0 && year2%100!=0 || year2% 400==0) ;
-		System.out.println("2021년은 윤년이다: " + result);
-
-	
+		System.out.println("2021년은 윤년이다: " + result); //내가 한 것
+		
+		int x  = year1%4;
+		int y = year1%100;
+		int z = year1&400;
+		result = (x==0 && y!=0 || z==0);
+		System.out.println("2020년은 윤년이다: " + result); 
+		
+		x  = year2%4;
+		y = year2%100;
+		z = year2&400;
+		result = (x==0 && y!=0 || z==0);
+		System.out.println("2021년은 윤년이다: " + result); //강사님이 주신 답
 	}
-
 }
