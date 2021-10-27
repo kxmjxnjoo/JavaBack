@@ -45,5 +45,4 @@ public class Operator02 {
 		System.out.println("k: " + k);
 		System.out.println("n: " + n);
 	}
-
 }
