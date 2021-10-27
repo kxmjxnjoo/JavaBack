@@ -8,6 +8,7 @@ public class ControllOpFor11 {
 		int i;
 		for(i=1; i<=20; i++) {
 				System.out.printf("(%d, %d, %d)\n", i-1, i, i+1);
+			
 			}		
 	}
 }
