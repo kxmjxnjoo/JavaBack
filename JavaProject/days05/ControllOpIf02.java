@@ -9,6 +9,8 @@ public class ControllOpIf02 {
 		System.out.print("정수를 입력하세요: ");
 		int a = sc.nextInt();
 		int b = a % 2;
+		
+		sc.close();
 
 		//if( b==0 ) {
 		//	System.out.println("입력한 정수는 짝수(even)입니다.");
