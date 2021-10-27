@@ -17,11 +17,6 @@ public class ControllOpFor09 {
 				sum = sum + i;
 		}
 		System.out.println("2부터 " + num + "까지의 짝수들의 총 합: " + sum);
-		
-		for(int i=1; i<=num; i++) {
-			if(i%2==0) continue; //현재 반복 실행이 끝나기 전에 다음 반복으로 이동
-				sum +=i;
-		}
-		System.out.println("2부터 " + num + "까지 짝수들의 총 합: " + sum); //내가 한 방법 조금 덜 간단한듯
+		// continue; //현재 반복 실행이 끝나기 전에 다음 반복으로 이동
 	}
 }
