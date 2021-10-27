@@ -11,12 +11,11 @@ public class ControllOpFor10 {
 		// 10개를 입력하는 중간에 종료를 원하면 0입력하여 종료, 최종합계 출력
 		//num = sc.nextInt();
 		for(i=0; i<10; i++) {
-			System.out.printf("입력한 정수%d : ", i+1);
+			System.out.printf("입력한 정수 %d : ", i+1);
 			num = sc.nextInt();
 			sum += num;
-			if(num ==0) break;		
+			if(num == 0) break;		
 		}
 		System.out.printf("\n입력한 정수들의 합계: %d", sum);
 	}  // 순서를 잘 못 생각함  num과 System~ 문장 순서가 바뀌어있어서 원하는대로 출력안됐음
-
 }
