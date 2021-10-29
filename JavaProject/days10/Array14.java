@@ -77,11 +77,5 @@ public class Array14 {
 			System.out.println();
 		}
 		
-		
-		
-		
-		
-		
-		
 	}
 }

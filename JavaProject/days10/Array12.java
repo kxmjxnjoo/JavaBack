@@ -28,5 +28,6 @@ public class Array12 {
 			}
 			System.out.println();
 		}
+		
 	}
 }
