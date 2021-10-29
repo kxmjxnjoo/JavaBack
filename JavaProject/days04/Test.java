@@ -1,7 +1,5 @@
 package days04;
 
-import javax.naming.spi.DirStateFactory.Result;
-
 public class Test {
 
 	public static void main(String[] args) {
