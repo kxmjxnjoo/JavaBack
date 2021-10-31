@@ -14,6 +14,5 @@ public class while_10952 {
 			if(A+B==0) break;
 			System.out.println(A+B);
 		}
-		
 	}
 }
