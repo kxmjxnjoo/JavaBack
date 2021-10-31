@@ -1,4 +1,4 @@
-package Baek_While;
+package While;
 
 import java.util.Scanner;
 
