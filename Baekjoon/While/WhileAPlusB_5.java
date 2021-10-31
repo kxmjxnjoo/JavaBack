@@ -14,5 +14,6 @@ public class WhileAPlusB_5{
 			if(A+B==0) break;
 			System.out.println(A+B);
 		}
+		
 	}
 }
