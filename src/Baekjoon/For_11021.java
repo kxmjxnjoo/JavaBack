@@ -15,5 +15,6 @@ public class For_11021 {
 			}
 		System.out.printf("Case #%d: %d\n", i, num1+num2);  
 		}
+		
 	}
 }
