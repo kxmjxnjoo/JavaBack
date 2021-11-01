@@ -34,4 +34,5 @@ public class Method11 {
 		else System.out.printf("수학점수 : ");
 			return sc.nextInt();
 	}
+	
 }
