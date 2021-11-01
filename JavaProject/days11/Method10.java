@@ -31,5 +31,4 @@ public class Method10 {
 		System.out.println("입력하신 삼각형의 넓이: " + c);
 	}
 
-
 }
