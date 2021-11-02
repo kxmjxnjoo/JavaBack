@@ -15,5 +15,4 @@ public class Class14 {
 		t1.init(100);
 		t1.prn();
 	}
-
 }
