@@ -27,10 +27,9 @@ public class Class02 {
 		System.out.println("\t=====성적표=====");
 		System.out.println("--------------------------------------------");
 		System.out.printf("번호\t이름\t국어\t영어\t수학\t총점\t평균\n");
+		System.out.println("--------------------------------------------");
 		System.out.printf("%d\t%s\t%d\t%d\t%d\t%d\t%.1f\n",
 				std1.bunho, std1.name,std1.kor,std1.eng,std1.mat,std1.tot,std1.ave);
-		System.out.println("--------------------------------------------");
-		System.out.printf("번호\t이름\t국어\t영어\t수학\t총점\t평균\n");
 		System.out.printf("%d\t%s\t%d\t%d\t%d\t%d\t%.1f\n",
 				std2.bunho, std2.name,std2.kor,std2.eng,std2.mat,std2.tot,std2.ave);
 		
