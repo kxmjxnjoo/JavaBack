@@ -8,7 +8,7 @@ class Cclass {
 	}
 	// 5. 생성자 메소드 오버로딩을 통해 없어진 디폴트 생성자 문제를 해결할 수 있음
 	Cclass() {
-		age = 40;
+		age = 40; 
 	}
 	public int getAge() {
 		return age;
