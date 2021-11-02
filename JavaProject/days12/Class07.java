@@ -48,6 +48,7 @@ class GetSetTest {
 //	}
 }
 public class Class07 {
+	
 	public static void main(String[] args) {
 		GetSetTest gs = new GetSetTest();
 		gs.setIntVar(123);
