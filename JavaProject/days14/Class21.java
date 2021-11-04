@@ -33,7 +33,7 @@ public class Class21 {
 		// Integer 클래스 (int 타입과 매핑되는 클래스)
 		// Integer 클래스의 parseInt 메소드는 문자열로 되어있는 정수값을 int 타입으로 변환
 		String strNum1 = "123";
-		String strNum2 = "56";
+		String strNum2 = "456";
 		System.out.println("String 문자연산 : " + strNum1 + strNum2);
 		System.out.println("정수 변환 후 연산 : " + Integer.parseInt(strNum1) + Integer.parseInt(strNum2));
 		// String 클래스
