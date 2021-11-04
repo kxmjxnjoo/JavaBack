@@ -43,6 +43,12 @@ public class Class21 {
 		System.out.println("정수 연산: " + (intNum1 + intNum2));
 		System.out.println("문자 변환 후 연산: " + String.valueOf(intNum1) + String.valueOf(intNum2));
 		
+		// 만약 char 타입의 경우
+		//(strNum1.charAt(0) - '0') * 100
+		//(strNum1.charAt(1) - '0') * 10
+		//(strNum1.charAt(2) - '0') * 1
+		// 'A' - 'B' : 변환이 없어도 아스키코드로 연산됨
+		
 		// Double 클래스 (double 타입과 매핑되는 클래스)
 		// Double 클래스의 parseDouble 메소드는 문자열로 되어있는 실수값을 double타입으로 변환
 		strNum1 = "10.75";
@@ -52,8 +58,6 @@ public class Class21 {
 		// 문자열 값을 실수로 변환한 후 연산 
 		System.out.println("실수 변환 후 연산: " + (Double.parseDouble(strNum1)+Double.parseDouble(strNum2)));
 	}
-	
-
 }
 
 // 만약 클래스 외부에서 사용한다면 -> Class21.abc();
