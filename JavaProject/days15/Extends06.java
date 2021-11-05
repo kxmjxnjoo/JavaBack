@@ -34,6 +34,7 @@ class SubD extends SuperD{
 		System.out.println("SubD(String)");		   //5
 	}
 }
+
 public class Extends06 {
 
 	public static void main(String[] args) {
