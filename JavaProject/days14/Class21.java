@@ -2,8 +2,6 @@ package days14;
 
 import java.util.Random;
 
-import sun.jvm.hotspot.tools.SysPropsDumper;
-
 public class Class21 {
 	
 	public static void main(String[] args) {
