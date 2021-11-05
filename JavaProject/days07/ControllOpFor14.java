@@ -7,7 +7,7 @@ public class ControllOpFor14 {
 		// 한개의 단이 출력되는 방향은 가로 세로 상관없음
 		int a, b;
 	for(a=2; a<=9; a++) {
-		System.out.printf("=" + a + "단 구구단=");
+		System.out.printf("=" + a + "단 구구단=\n");
 		for(b=1; b<=9; b++) {
 		System.out.println(a + " x " + b + " = " + a*b);
 	}
