@@ -35,7 +35,7 @@ public class ControllOpFor01 {
 		//----------------------------------------------------------------------------------
 		// 반복을 제어하는 변수의 반복실행문 안쪽 선언
 		// int k;
-		for(int k = 101; k<=100; k++) {
+		for(int k = 101; k<=100; k--) {
 			System.out.println("7겁나 쉬운 JAVA~~");
 		}
 		// System.out.println(k);
