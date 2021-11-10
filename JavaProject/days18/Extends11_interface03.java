@@ -39,6 +39,7 @@ interface InterC_Sub extends InterC_Super1, InterC_Super2{
 	}
  }
  public class Extends11_interface03 {
+	 
 	public static void main(String[] args) {
 		SubC2 c1 = new SubC2();
 		// 부모 인터페이스의 레퍼런스 변수에 자식 클래스의 객체를 대입
