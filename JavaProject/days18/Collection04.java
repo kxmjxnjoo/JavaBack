@@ -31,7 +31,6 @@ public class Collection04 {
 			lotto.add ( (int)(Math.random()*45)+1);
 		}
 		for(Integer i : lotto) System.out.printf("%d ", i);
-		
 		System.out.println();
 		
 		// 해쉬세트 콜렉션에는 sort메소드가 없음 따라서 링크드 리스트 
