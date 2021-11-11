@@ -4,7 +4,7 @@ import java.text.ParseException;
 
 public class Exception04 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		try {
 			// 예외상황 고의 발행
 			ArithmeticException a = 
