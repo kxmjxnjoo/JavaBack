@@ -25,6 +25,10 @@ class Rect{
 		System.out.println("Rect클래스의 hashCode 실행");
 		return this.x+this.y;
 	}
+	// hashCode 메소드의 오버라이딩은 특별한 경우를 제외하고는 권장하지 않음
+	// 이미 중복값이 발생되지 않도록 철저히 준비된 연산을 다른 연산으로 바꿔서 실행하는 것 자체가
+	// 자바의 코딩규칙을 무너뜨릴 가능성이 있기때문에 다만 오버라이딩은 불가능한 동작이 아니므로 
+	// 가능은 하다고 이해하면됨 해쉬맵의 키값중 특정 값을 찾으려면 keys나 keyset 메소드 이용해서 직접 비교하는 것을 권장
 }
 public class Collection09 {
 	public static void main(String[] args) {
@@ -43,7 +47,5 @@ public class Collection09 {
 //    1. 입력된(검색할) 객체의 hashCode 메소드 실행
 //    2. 반환받은 hashCode 메소드의 결과를 현재 저장되어 있는 모든 객체들의 hashCode 메소드의 반환값과 비교
 //    3. 만약 동일한 hashCode 메소드의 결과가 존재한다면 equals 메소드를 싫생하여 두 객체가 동일한지 비교
-		
-		
 	}
 }
