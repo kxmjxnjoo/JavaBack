@@ -10,7 +10,17 @@ package days19;
 public class Exception01 {
 
 	public static void main(String[] args) {
-
+		
+		for(int i=1; i<=10; i++) {
+		int k = (int)(Math.random()*10);
+		
+			try {
+				int result = 100/ k;
+				System.out.println(result);
+			} catch(ArithmeticException e) {
+				System.out.println("0으로 나눴습니다");
+			} 
+			// 에러가 발생하면 catch구문 안의 명령을 대신 실행하고 프로그램 실행을 계속함
+		}
 	}
-
 }
