@@ -62,6 +62,7 @@ class JCheckBoxTest extends JFrame implements ItemListener{
 		jtf.setText("현재 선택 항목 : " + s);
 	}
 }
+
 public class Swing16 {
 
 	public static void main(String[] args) {
