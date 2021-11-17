@@ -38,6 +38,5 @@ public class IO01 {
 		input = System.in.read();
 		System.out.printf("\n입력된 값 : %d\n", input);
 		System.out.printf("입력된 문자 : %c\n",(char)input);
-		
 	}
 }
