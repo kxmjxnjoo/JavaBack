@@ -1,5 +1,5 @@
 package days23;
-/*### ObjectInputStrea, ObjectOutputStream
+/*### ObjectInputStream, ObjectOutputStream
 - 객체 자체를 입출력할 수 있음
 - 클래스와 객체를 저장하기 위한 인터페이스가 제공됨
 - 사용자 정의 클래스를 사용하여 객체를 입출력해야하는 경우 해당 클래스는 
