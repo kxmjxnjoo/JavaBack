@@ -65,7 +65,7 @@ public class IO19 {
 			//연산부호에 따른 연산
 			if(operator.equals("+")) result = leftValue + rightValue;
 			else if(operator.equals("-")) result = leftValue - rightValue;
-			else if(operator.equals("x")) result = leftValue * rightValue;
+			else if(operator.equals("*")) result = leftValue * rightValue;
 			else if(operator.equals("/")) result = leftValue / (double)rightValue;
 			else if(operator.equals("%")) result = leftValue % rightValue;
 			
