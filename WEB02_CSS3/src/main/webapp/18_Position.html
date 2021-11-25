@@ -32,11 +32,21 @@
 	#abs5{top:200px; left:200px; background:red;}
 	#abs6{top:250px; left:250px; background:blue;}
 	#abs7{top:300px; left:300px; background:red;}
+	
+	#fixed{position:fixed; top:5px; left:5px; width:100px; height:100px;
+		background:black; z-index:10;}
+		/* z-index:10: 다른 어떤 div보다 위에 있게하기 위해 높은 인덱스 값을 지정함*/
 </style>
 </head>
 <body>
+
+<h1>절대적 위치 좌표 - fixed</h1>
+<div id="fixed"></div>
+
 <h1>절대적 위치 좌표 - absolute</h1>
+<div class="temp"></div>
 <div id="wrap">
+<hr/>
 	<div id="abs1" class="box5"></div>
 	<div id="abs2" class="box5"></div>
 	<div id="abs3" class="box5"></div>
