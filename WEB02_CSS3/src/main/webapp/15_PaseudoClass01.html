@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>15_PaseudoClass01</title>
+<style type="text/css">
+	ul{list-style:none; padding:0px; margin:0px; height:60px;}
+	ul li{ border:1px dashed black; float:left; padding:15px; width:100px; text-align:center; }
+/* ul li:nth-child(1){background:orange;}
+	ul li:nth-child(2){background:yellow;}
+	ul li:nth-child(3){background:orange;}
+	ul li:nth-child(4){background:yellow;}
+	ul li:nth-child(5){background:orange;}
+	ul li:nth-child(6){background:yellow;}  
+	하나하나 지정할 순 있지만 목록이 많은 경우엔 비효율적임 */
+	ul li:nth-child(2n){background:orange;}
+	ul li:nth-child(2n+1){background:yellow;}
+
+	ul li:first-child{ border-radius:20px 0 0 20px;}
+	ul li:last-child{ border-radius: 0 20px 20px 0;}	
+</style>
+</head>
+<body>
+<ul>
+	<li>회사소개</li>
+	<li>사업	</li>
+	<li>조직도</li>
+	<li>게시판</li>
+	<li>고객지원</li>
+	<li>사이트맵</li>
+</ul>
+</body>
+</html>
