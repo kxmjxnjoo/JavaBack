@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>네이버 : 회원가입</title>
+<style type="text/css">
+/*바탕색, 텍스트 박스 내부 폰트 지정*/
+body{background:#F5F6F7}
+input[type=text]{color:#F5F6F7; font-size:95%; font-family:굴림;}
+/*각 묶인 위치*/
+form{position:realtive; width:450px; height:100%;background:#F5F6F7; margin:20px auto;}
+/*로고 위치*/
+.logo_Line{padding-left:25%; padding-top:10%; padding-bottom:5%;}
+/*제목*/
+.title{position:relative; font-family:굴림; font-weight:bold; font-size:85%; margin:5 auto; }
+/*대부분의 박스, 텍스트 입력 부분*/
+.text_box{position:relative; width:100%; height:45px; border:1px solid#DADADA;
+	background:#FFFFFF; margin:7px auto;}
+.text{position:relative; border:none;background:#FFFFFF;} 
+/*생년,일 박스*/
+.birth_box{position:relative; width:30%; height:45px; border:1px solid gary; 
+	background:#FFFFFF; margin:0 auto;}
+.text2{position:relative; width:65%; height:45px; outline:none; margin:3px auto;}
+/* text_box:active{position:relative; width:100%; height:45px; border:1px solid gray;
+	background:white; margin:7px auto;} */
+
+#get_number{position:relative; width:60%; height:45px; border:1px solid gary; 
+	background:#FFFFFF; margin:0 auto;}
+#confirm_num{position:relative; width:30%; height:45px; margin:0; 
+	background:#03B753; color:white;}
+#phone_box{position:relative; width:100%; height:45px; border:1px solid#DADADA;
+	background:#F5F6F7; margin:7px auto;}
+#choice{position:relative; font-size:70%; color:gray;}
+#join{position:relative; width:100%; height:45px; border:1px solid #03B753; margin:0 auto;
+	background:#03C75A; color:white;}
+	
+.footer{position:relative; font-size:75%; color:gray; text-align:center; margin:30px auto;}
+input:disivle{background:#F5F6F7}
+</style>
+</head>
+<body>
+<form>
+<div class="logo_Line">
+	<a href="https://www.naver.com/" target="_blank">
+	<img src ="images/naver_logo.png" width="250"></a></div>
+</form>
+
+
+<form>
+	<div class="title">아이디</div>
+	<div class="text_box">
+	<input type ="text" class="text" placeholder="@naver.com"></div>
+	
+	<div><label class="title">비밀번호</label></div>
+	<div class="text_box">
+	<input type ="text" class="text">
+	<img src="images/key1.png" class="right">
+	</div>
+	
+	<div><label class="title">비밀번호 재확인</label></div>
+	<div class="text_box">
+	<input type ="text" class="text">
+	<img src="images/key2.png" class="right">
+	</div>
+</form>
+
+
+<form>
+	<div><label class="title">이름</label></div>
+	<div><div class="text_box">
+	<input type ="text" class="text">	</div>
+
+	<div><label class="title">생년월일</label></div>
+	<span><input type="text" class="birth_box" placeholder="년(4자)"/>
+	<select class="birth_box">		<option>월</option>	
+		<option>1</option>				<option>2</option>				<option>3</option>		
+		<option>4</option>				<option>5</option>				<option>6</option>		
+		<option>7</option>				<option>8</option>				<option>9</option>		
+		<option>10</option>				<option>11</option>				<option>12</option>		
+	</select>
+	<input type="text" class="birth_box" placeholder="일"/></span>
+</form>
+
+
+<form>
+	<div><label class="title">성별</label></div>
+	<select class="text_box">
+		<option>성별</option>		<option>남자</option>
+		<option>여자</option>		<option>선택안함</option>
+	</select>
+	
+	<div><span><label class="title">본인 확인 이메일
+	<label id="choice">(선택)</label></label></span></div>
+	<div class="text_box">
+	<input type ="text" class="text" placeholder="선택입력"></div>
+</form>
+
+
+<form>
+	<div><label class="title">휴대전화</label></div>
+	<select class="text_box">
+		<option>대한민국+82</option>		<option>가나</option>
+		<option>여자</option>		<option>선택안함</option>
+	</select>
+	<span>
+	<input type ="text" id="get_number" placeholder="전화번호 입력">
+		<input type="submit" id="confirm_num" value="인증번호 받기"></span>
+		<input type="text" id="phone_box" placeholder="인증번호 입력하세요" disabled>
+	<input type="submit" id="join" value="가입하기">
+</form>
+
+
+<footer>
+	<div class="footer"><a href ="https://policy.naver.com/rules/service.html">이용약관 </a>|
+	<a href ="https://policy.naver.com/policy/privacy.html">개인정보처리방침 </a>|
+	<a href ="https://policy.naver.com/rules/disclaimer.html">책임의 한계와 법적고지 </a>|
+	<a href ="https://help.naver.com/support/service/main.help?
+		serviceNo=532&_membership_p.membership_p.membership_26" 
+		target="_blank">회원정보 고객센터</a></br><br/>
+	<a href="https://www.naver.com"><img src="images/naver_logo.png" width="60"></a>
+	&nbsp;&nbsp;Copyright	<a href ="https://www.navercorp.com/"target="_blank">
+	@NAVER Corp.</a> All Rights Reserved.</div>
+</footer>
+</body>
+</html>

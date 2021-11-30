@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>네이버 : 회원가입ㅕㅓ</title>
+<style text="text/css">
+/*로고*/
+body{background:#F5F6F7}
+input[type=text]{width:90%; height:90%; font-size:95%; 
+	font-family:굴림; border:none; text-align:left; margin: 20px auto;}
+input[type=id_text]{width:75%; height:90%; font-size:95%; 
+	font-family:굴림; border:none; text-align:left;}
+.login{background:#F5F6F7; width:450px; margin: 0 auto;}
+.logo{padding-top:10%; padding-left:35%}
+.title{font-weight:bold;font-size:85%;}
+.id_pwd{position:relative; width:450px; height:260px; background:#F5F6F7;
+	margin:20px auto;}
+
+.text_box{position:relative; width:100%; height:30px; 
+	border:1px solid#DADADA; 	background:#FFFFFF; margin:10px auto;}
+.img{vertical-align:middle;}
+
+.nbge{position:relative; width:450px; height:260px; background:#F5F6F7;
+	margin:20px auto;}
+	
+.nbge_box{position:relative; width:140px; height:40px; background:#F5F6F7;
+	margin:10px auto;}
+.number{position:relative; width:450px; height:260px; background:#F5F6F7;
+	margin:20px auto;}
+	
+#get_number{position:relative; width:70%; height:45px; 
+	border:1px solid #DADADA; 	background:#FFFFFF; margin:0 auto;}
+#confirm_num{position:relative; width:27%; height:50px;
+	background:#03C75A; color:white; border:1px solid #03B753; }
+#phone_box{position:relative; width:100%; height:45px; 
+	border:1px solid#DADADA;	background:#F5F6F7; margin:7px auto;}
+#join{position:relative; width:100%; height:50px; 
+	border:1px solid #03B753; margin:0 auto;	background:#03C75A; 
+	font-weight:bold; font-size:110%; color:white;}
+	
+.footer{position:relative; width:450px; height:20px;background:#F5F6F7;
+	font-size:85%; color:black; text-align:center; margin:30px auto;}
+
+</style>
+
+</head>
+<body>
+<!--로고-->
+<div class="login">
+<div class="logo">
+	<a href="http:www.naver.com"><img src="images/naver_logo.png"></a>
+</div>
+<!--아이디 비밀번호, 재확인-->
+<div class="id_pwd">
+	<div class="title">아이디</div>
+	<div class="text_box">
+	<input type="id_text">@naver.com</div>
+	
+	<div class="title">비밀번호</div>
+	<div class="text_box">
+	<input type="text"><img src="images/key1.png" class="img"></div>
+	
+	<div class="title">비밀번호 재확인</div>
+	<div class="text_box">
+	<input type="text"><img src="images/key2.png" class="img"></div>
+</div>
+
+<div class="nbge">
+	<div class="title">이름</div>
+	<div class="text_box">
+	<input type="text"></div>
+	
+	<div class="title">생년월일</div>
+	<span class="nbge_box">
+	<input type="text" placeholder="년(4자리)">
+	<select>월<option>1</option>	<option>2</option>	<option>3</option>	<option>4</option>
+	<option>5</option>	<option>6</option>	<option>7</option>	<option>8</option>
+	<option>9</option>	<option>10</option>	<option>11</option>	<option>12</option> </select>
+	<input type="text" placeholder=" 일"></span>
+	
+	<div class="title">성별</div>
+	<select class="text_box"><option>선택</option> <option>남자</option><option>여자</option><option>선택안함</option>
+	</select></div>
+	
+	<div class="title">본인 확인 이메일</div>
+	<div class="text_box">
+	<input type="text" placeholder=" 선택입력"></div>
+</div>
+
+<div class="number">
+	<div class="title">휴대전화</div>
+	<select class="text_box">
+	<option>대한민국 +82</option>	<option>그리스 +30</option><option>노르웨이 +47</option>
+	<option>뉴질랜드 +64</option> </select>
+	
+	<div id="get_number"><input type="text" place holder="전화번호 입력하세요"> 
+	<div id="confrim_num"></div></div>
+	<div class="text_box"><input type="text" placeholder="인증번호 입력하세요" disabled>
+		
+<div class="join">
+	<input type="submit" id="join" value="가입하기">
+</div>
+
+<div class ="footer">
+	<footer>
+		<div class="footer"><a href ="https://policy.naver.com/rules/service.html">이용약관 </a>|
+		<a href ="https://policy.naver.com/policy/privacy.html">개인정보처리방침 </a>|
+		<a href ="https://policy.naver.com/rules/disclaimer.html">책임의 한계와 법적고지 </a>|
+		<a href ="https://help.naver.com/support/service/main.help?
+			serviceNo=532&_membership_p.membership_p.membership_26" 
+			target="_blank">회원정보 고객센터</a><br/><br/>
+		<a href="https://www.naver.com"><img src="images/naver_logo.png" width="60"></a>
+		&nbsp;&nbsp;Copyright	<a href ="https://www.navercorp.com/"target="_blank">
+		@NAVER Corp.</a> All Rights Reserved.</div><br/>
+	</footer>
+	</div>	
+</div>
+</div>
+</body>
+</html>
