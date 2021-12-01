@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>07TransformEx01.html</title>
+<style type="text/css">
+    #base{position:relative; width:800px; height:400px; border:1px solid black;}
+    #tire{position:relative; width:200px; height:200px; top:100px; background: red;
+    border-radius:50%; line-height:200px; text-align:center; font-size:50px; transition:2s;
+    color:white; font-weight:bold;}
+#base:hover #tire{transform:translateX(450px) rotate(200deg) scale(1.7);}
+/* #base:hover #tire{transform:translateX(450px); transform rotate(200deg); 
+    transformscale(1.7); 로 쓰게되면 길어지고 ;를 매번 붙여야하고, 
+    순서를 다르게 사용하게 되면 움직임이 달라지기 때문에 주의해야함} */
+</style>
+</head>
+<body>
+    <div id="base">
+        <div id="tire">타이어</div>
+    </div>
+    <!-- base에 마우스를 올리면 tire가 오른쪽으로 이동+회전+크게 되도록 변경 -->
+</body>
+</html>
