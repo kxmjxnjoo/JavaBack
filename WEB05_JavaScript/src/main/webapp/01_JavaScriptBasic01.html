@@ -183,8 +183,9 @@
 
 
 
-/* 12. 입력   
+/* 12. 입력  
     var input = prompt('이름을 입력하세요.', '두 글자 이상 입력');
+    var num = Number(input);
     //괄호안의 첫번째 텍스트 → 상자안에 표시될 안내문
     //괄호안의 두번째 텍스트 → 입력란에 미리 입력되고 블럭처리되어 있을 텍스트
     alert(input+'님 반갑습니다.');
@@ -195,8 +196,23 @@
         alert('수락하셨군요.');
     }else{
         alert('거절하셨군요.');
-    } */
-    
+    } 
+     */
+
+    /*국어 영어 수학 점수를 입력받고, 총점 평균을 출력하도록 자바스크립트
+    명령을 구성(입력받은 점수, 총점 평균을 세줄에 걸쳐 출력
+    입력받은 문자를 숫자로 변환하는 합수 Number()
+    a = Number('123')  */
+    var input = prompt('국어 점수를 입력하세요', '100');
+    var kor = Number(input);
+    var input = prompt('영어 점수를 입력하세요', '100');
+    var eng = Number(input);
+    var input = prompt('수학 점수를 입력하세요', '100');
+    var mat = Number(input);
+
+    var tot = kor+mat+eng;
+    var ave = tot/3;
+    alert('입력한 점수 국어:' + kor + ',영어' + eng + ',수학:' + mat + '\n총점:' + tot + "\n평균:" + ave);
 </script>
 </head>
 <body>
