@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_Function03.htmt</title>
+    <script type="text/javascript">
+//1.익명함수의 재정의
+var func = function(){document.write('<h1>익명함수1</h1>'); } 
+func(); //익명함수1s
+var func = function(){document.write('<h1>익명함수2</h1>'); } 
+func(); //익명함수2
+//2.선언적 함수의 재정의
+//- 웹브라우저는 script태그 내부의 내용을 읽기전에 선언적 함수를 먼저 읽음
+//- 마지막에 정의된 move 함수가 세군데에 호출부분에서 실행됨
+function move(){document.write('<h1>move() 함수1 호출.</h1>'); }
+move(); //move() 함수3 호출
+function move(){document.write('<h1>move() 함수2 호출.</h1>'); }
+move(); //move() 함수3 호출
+function move(){document.write('<h1>move() 함수3 호출.</h1>'); }
+move(); //move() 함수3 호출
+//익명함수, 선언적 함수 모드 자바스크립트의 함수는 필요에 따라 재정의 되어 사용가능함
+// 익명함수는 재정의 되어 변수에 할당될 때 마다 내용이 갱신되나 선언적 함수는 스크립트 태그 내에서 먼저 읽고 시작되기 때문에 가장 마지막으로 정의된 함수의 내용이 함수 이름으로 정의되고 시작함
+// 위의 코드에 세번의 move()함수 호출 명령은 모두 'move()함수3 호출' 내용을 출력함
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
