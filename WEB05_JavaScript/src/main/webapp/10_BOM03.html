@@ -10,11 +10,11 @@
     // - 브라우저의 주소 표시줄과 관련된 객체
     // - 프로토콜의 종류, 호스트 이름, 문서 위치등의 정보가짐
     // - 페이지를 링크나 주소창을 이용하지 않고 이동할 때 많이 사용
-    // var output = '';
-    // for(var key in location){
-    //     output += '<h3>※ ' + key + ':' + location[key] + '</h3>';
-    // }
-     document.write(output);
+    var output = '';
+    for(var key in location){
+        output += '<h3>※ ' + key + ':' + location[key] + '</h3>';
+    }
+    document.write(output);
 
     // - 페이지 이동 방법 4가지
     //location = 'https://www.daum.net';
