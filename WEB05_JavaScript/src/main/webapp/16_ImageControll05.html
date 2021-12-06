@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16_ImageControll05</title>
+<script type="text/javascript">
+var number=1;
+var timer;
+function start(){
+   timer = setInterval(function(){
+        number++; //이순서 아래로 내려가면 0.jpg가 실행되기 때문에 조심
+        document.getElementById("target").src="images/" + number + ".jpg";
+        if(number==10) number=0;
+    }, 1000);
+}
+function stop(){
+    clearInterval(timer);//
+}
+</script>
+</head>
+<body onLoatd="start()">
+    <img src="images/1.jpg" id="target" onmouseover="stop();" onmouseout="start();">
+</body>
+</html>
