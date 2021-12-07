@@ -7,7 +7,7 @@
 <title>22_ImageControll11</title>
 <style type="text/css">
     #view{position:relative; width:600px; height:400px; margin:0 auto; 
-    border:1px dashed black;}
+    border:1px dashed black; overflow:hidden;}
     #imgs{position:absolute; width:4800px; height:400px; left:0; top:0; border:1px dashed
     red; transition:0.3s}
     img{width:600px; height:400px;}
@@ -17,12 +17,9 @@
     #remot ul li{float:left; width:14px; height:14px; background:white; border-radius: 50%; margin:18px 4px;}
 </style>
 <script type="text/javascript">
-
 function move(x){
-    
-    document.getElementById("view_img" + i).style.left = '-600px';
-    
-    document.getElementById("view_img" + x).style.left='0px';
+    var dist = -1 * x * 600;/*거리 계산....확인필요*/
+    document.getElementById("imgs").style.left = dist + 'px';
 }
 
 </script>
