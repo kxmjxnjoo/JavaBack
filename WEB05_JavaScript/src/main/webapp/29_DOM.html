@@ -31,6 +31,19 @@ function changeHeader(){
     //header.innerHTML = "펭귄";
     //문서객체를 변수에 저장하고 변수.innerHTML사용이 가능함 그 외 메소드들도 변수와 함께 사용가능
 }
+function createTag(){
+    //문서객체(태그)생성 & 변수 저장
+    var header = document.createElement('h2')//h2태그의 생성. 아직 화면엔 표시되지 않음
+    
+    //태그에 삽입될 텍스트를 생성 & 변수에 저장
+    var textNode = document.createTextNode('Hello DOM')
+
+    //텍스트 노드의 내용을 문서객체(h2)에 텍스트가 있다면 그 끝에 이어서, 없다면 삽입
+    header.appendChild(textNode);
+
+    //body에 header객체를 내용의 맨끝에 추가, 없다면 처음의 내용으로 추가
+    document.body.appendChild(header);
+}
 </script>
 </head>
 <body>
@@ -38,5 +51,6 @@ function changeHeader(){
     <div><h1 id="header_2" class=""name="">HEADER-2</h1></div>
     <h1 id="clock"></h1>
     <input type="button" value="제목변경" onclick="changeHeader();"/>
+    <input type="button" value="문서객체생성1" onclick="createTag();"/>
 </body>
 </html>
