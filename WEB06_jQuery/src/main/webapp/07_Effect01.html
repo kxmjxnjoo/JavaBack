@@ -19,7 +19,7 @@ $(function(){
         /*0번 버튼을 클릭했을 때 실행*/
         //$('span:first').css('backgound','yellow');//배경색 변경
         //$('span:first').show(); //.show() - 화면에 보여지게 하는 함수
-        $('span:first').show(function(){$('this').css('background','yellow'); });
+        $('span:first').show(function(){ $(this).css('background', 'yellow'); });
         //show와 함께 다른 동작을 추가하고 싶다면 
         //.show( fucntion(){}) 이처럼 show() 안에 function(){}을 넣어서 실행시킴(hide도 동일)
         //.show()에 익명함수를 넣으면 함수 동작 시간에 동작시간 지연이 포함됨
@@ -31,9 +31,10 @@ $(function(){
 //css의 transition처럼 show hide에 동작시간을 설정함
 $('button:eq(2)').click(function(){
     $('span:last').show(2000, function(){
-        $('this').css('background','orange'); 
+        $(this).css('background','orange');
     });
-}); 
+}); // show() 와 hide() 에는 추가 동작을  function(){} 을 통해 정의할수도 있고, 
+    // 위아래처럼 동작 시간을 밀리초단위로 설정이 가능
     $('button:eq(3)').click(function(){
         $('span:last').hide(2000);
     }); 
