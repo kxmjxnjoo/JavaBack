@@ -22,7 +22,7 @@ alter table memberlist rename column membernum to num;
 select * from booklist;
 select * from rentlist;
 
---테이블을 만들며 생성한 기본키와 오ㅚ래키등은 필드명이 바뀌면 바뀐 이름으로 자동 적용됨
+--테이블을 만들며 생성한 기본키와 외래키등은 필드명이 바뀌면 바뀐 이름으로 자동 적용됨
 
 --외래키는 참조하는 필드의 자료형과 참조되는 필드의 자료형이 일치해야 생성되고 유지됨
 --아래 필드의 자료형 변경을 연결된 외래키에서 시도한다면 에러 발생
@@ -32,7 +32,7 @@ select * from rentlist;
 alter table memberlist modify name varchar2(50); -- 수정 성공
 
 --booklist의 num 필드를 varchar2(5)로 자료형 변경
-alter table booklist modify num varchar2(5); 
+alter table booklist modify num varchar2(5); -- 수정 실패
 --column type incompatible with referenced column type 수정 실패
 --참조되는 컬럼(필드)의 자료형이 현재 수정하려는 컬럼(필드)자료형과 호환되지 않음
 
@@ -50,6 +50,7 @@ alter table booklist add grade varchar2(15);
 alter table memberlist add gender varchar2(3);
 --memberlist에 나에(age) 필드를 number(2)로 추가
 alter table memberlist add age number(2);
+alter table memberlist modify age number(3);
 
 
 --4. 필드의 삭제
@@ -67,6 +68,7 @@ alter table booklist add grade varchar2(15);
 alter table memberlist add gender varchar2(3);
 alter table memberlist add age number(2);
 
+
 --5. 제약 조건의 추가/제거
 -- 삭제 : ALTER TABLE 테이블명 DROP CONSRAINT 제약 조건명
 --rentlist 테이블의 booknum에 걸려있는 외래키 제약 조건 제거
@@ -79,13 +81,13 @@ alter table rentlist drop constraint rent_pk;
 
 -- 위에서 실패했던 필드의 자료형 수정 재실행
 -- booklist  의 num 을 varchar2(5) 로 수정
-alter table booklist modify num varchar2(5);
+alter table booklist modify num number(5);
 -- memberlist  의 num 을 varchar2(5) 로 수정
-alter table memberlist modify num varchar2(5);
+alter table memberlist modify num number(5);
 -- rentlist 의 booknum 을 varchar2(5) 로 수정
-alter table rentlist modify booknum varchar2(5);
+alter table rentlist modify booknum number(5);
 -- rentlist 의 membernum 을 varchar2(5) 로 수정
-alter table rentlist modify membernum varchar2(5);
+alter table rentlist modify membernum number(5);
 
 -- 원래대로 복원
 alter table booklist modify num number(5);
@@ -104,7 +106,7 @@ alter table memberlist add constarint check_gender check(gender in('F','M'));
 --gender 필드의 돌아갈 값이 in()함수 안의 항목 중 하나와 같다면 입력 허용, 아니면 불허하는 제약 조건임
 
 --memberlist 테이블의 나이(age)필드에 120살이 초과되는 나이는 입력되지 못하게 제약 조건 추가
-alter table memberlist add constraint check_age check(age<100);
+alter table memberlist add constraint check_age check(age<150);
 
 --위에 삭제되었던 fk1, fk2, rent_pk 계약조건은 다시 설정하세요
 --rent_pk는 num 필드로만 설정하세요
