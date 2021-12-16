@@ -11,20 +11,19 @@ drop table memberlist purge;
 drop table rentlist pruge;
 
 
-CREATE table booklist(
-	booknum number(5) not null,
-	subject varchar2(30) not null,
-	makeyear number(4) default 2021,  --number 4란 4byte가 아니라 4자리 숫자를 의미
+create table booklist(
+	bookNum vachar2(5) not null,
+	subject varchar2(30),
+	makeyear number(4) default 2021, --number 4란 4byte가 아니라 4자리 숫자를 의미
 	inprice number(6) default 0,
-	rentprice number(6) default 0 ,
-
+	rentprice number(6) default 0,
+	
 	constraint booknum_pk primary key(booknum)
 	-- constraint : 테이블 레벨의 제약조건을 지정하는 키워드
 	-- booknum_pk : 테이블 외부에서 현재 제약 조건을 컨트롤 하기 위한 제약 조건의 고유이름
 	-- primary key(booknum) : 기본키로 bookum을 지정하겠다는 뜻 
 );
 
-select * from booklist;
 -- 테이블 생성 #2
 -- 테이블 이름 : MemberList(회원리스트)
 -- 필드 : memberNum, memberName, phone, birth, Bpoint
@@ -72,7 +71,7 @@ select * from memberlist;
 create table rentlist(
 	rent_date date default sysdate,--sysdate : 오늘날짜를 표시하는 오라클의 키워드
 	idx number(5) not null, --해당 일자의 대여 순번 1부터 시작해서 하루가 지나면 reset
-	booknum number(5) not null,
+	booknum varchar2(5) not null,
 	memberNum varchar2(5) not null,
 	discount number(4),
 	constraint rent_pk primary key(rent_date, idx), 
