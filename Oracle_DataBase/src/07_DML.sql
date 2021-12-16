@@ -5,9 +5,11 @@ DNAME VARCHAR2(14), --부서명
 LOC VARCHAR2(14) --위치
 );
 
+
 --[2] 레코드 추가
 --레코드 추가 명령 사용 #1 
 insert into exam01(demtno, dname, loc) values(10, 'ACCOUNT', 'NEW YORK');
+
 --레코드 추가 명령 사용 #2
 insert into exam01 values(30, 'SALES', 'CHICHAGO');
 
@@ -37,6 +39,8 @@ insert into booklist values(book_seq.nextVal, '아주작은 습관의 힘', 2019
 insert into booklist values(book_seq.nextVal, '하루공부 365', 2021, 17820, 2500, 'all'); --방법 #2
 
 select * from booklist;
+
+------
 
 -- 같은 방식으로 memberlist에 7명의 데이터를 추가해주세요. member_seq를 이용
 insert into memberlist
@@ -69,11 +73,12 @@ insert into rentlist values('2021/12/03', rent_seq.nextVal, 2, 3, 20);
 insert into rentlist values('2021/12/03', rent_seq.nextVal, 6, 4, 20);
 insert into rentlist values('2021/12/04', rent_seq.nextVal, 9, 5, 20);
 insert into rentlist values('2021/12/04', rent_seq.nextVal, 10, 7, 30);
-
+	
 select * from rentlist;
 
+
 --[3] 데이터 변경- 수정(UPDATE)
-alter table exam01 rename column demtno to deptno;
+alter table exam01 rename column demtno to deptno; --오타내서 이름 수정함
 
 --데이터 수정의 예 '오라클에선 대소문자를 구분하지 않지만 ''->데이터 값은 구분 필수
 --exam01 테이블에서 demtno  deptno 값을 모두 30으로 수정
@@ -182,4 +187,4 @@ references memberlist(num) on delete cascade;
 --booklist와 memberlist테이블 num은 대여기록이 있을경우 수정 불가능함(아직)
 --이를  해결하기 위해 외래키 설정시 on update cascade 옵션을 추가하면 되지만 
 --오라클해서는 허용 되지 않음 mysql에서만 사용가능하며 오라클에서는 
---뒷단원의 트리거를 공부하며 외래키가 수정되도록 할 것 
+--뒷단원의 트리거를 공부하며 외래키가 수정되도록 할 것
