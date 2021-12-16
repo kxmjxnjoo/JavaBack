@@ -33,4 +33,3 @@ create sequence rent_seq start with 1 increment by 1;
 --member_seq를 삭제했다가 4부터 늘어나도록 다시 생성해주세요
 drop sequence member_seq;
 create sequence member_seq start with 4 increment by 1;
-
