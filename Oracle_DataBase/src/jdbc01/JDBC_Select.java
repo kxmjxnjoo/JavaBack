@@ -21,7 +21,7 @@ public class JDBC_Select {
 			con = DriverManager.getConnection(url, id, pw);
 			System.out.println("데이버테이스에 연결 성공했습니다");
 			String sql = "select * from customer";
-			//데이터베이스 연결후에는 SQl 명령을 사용하기 윟 STring 변수에 SQL명령을 
+			//데이터베이스 연결후에는 SQl 명령을 사용하기 위해 String 변수에 SQL명령을 
 			//준비함. 데이터 베이스에 제공되어질 명령이므로 String 형으로 준비함 
 			
 			//SQL문을 장착한 con을 pstmt에 전달함
