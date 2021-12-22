@@ -155,18 +155,18 @@ public class MemberDriver {
 		
 		//회원번호는 Sequence 를 이용합니다
 		
-		System.out.print("이름을 입력하세요");
+		System.out.print("이름을 입력하세요: ");
 		mdto.setName(  sc.nextLine() );
 		
-		System.out.print("전화번호를 입력하세요");
+		System.out.print("전화번호를 입력하세요: ");
 		mdto.setPhone(  sc.nextLine() );
 		
-		System.out.print("성별을 입력하세요(M/F) : ");
+		System.out.print("성별을 입력하세요(M/F): ");
 		mdto.setGender(  sc.nextLine() );
 		
 		//생일 입력 - java.util.Date()형식의 입력 후  java.sql.Date()로의 변환이 필요합니다
 		//java.util.Date() 의 입력을 위해선  SimpleDateFormat 의 parse 동작이 필요합니다
-		System.out.printf("생일을 입력하세요(YYYY-MM-DD");
+		System.out.printf("생일을 입력하세요(YYYY-MM-DD): ");
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		java.util.Date d = null;
 		while(true) {
@@ -174,7 +174,7 @@ public class MemberDriver {
 				d = sdf.parse( sc.nextLine() );
 				break;
 			} catch (ParseException e) {
-				System.out.print("날짜를 입력예로 맞춰 다시 입력하세요(입력예:2015-12-31)");		
+				System.out.print("날짜를 입력예로 맞춰 다시 입력하세요(입력예:2015-12-31): ");		
 			} 		
 		}
 		//java.util.Date 을  java.sql.Date 로 변환 
