@@ -45,7 +45,7 @@ public class MemberDriver {
 		}
 		
 		mdao.delete( Integer.parseInt(membernum) );
-		
+		System.out.println("삭제되었습니다");
 	}
 
 	private static void update() {
