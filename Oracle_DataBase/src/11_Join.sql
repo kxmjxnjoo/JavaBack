@@ -88,14 +88,17 @@ where a.deptno = b.deptno and a.sal between c.losal and c.hisal;
 -- 출력순서 - 대여일자, 도서제목, 회원이름, 포인트
 -- 테이블 별칭은 a, b, c
 
-select a.rentdate, b.subject, c.name, c.bpoint from rentlist a, booklist b, memberlist c
-where a.num = c.num and a.num between c.num and c.name
-
-select a.rentdate as "대여일자", b.subject as "도서제목", c.name as "회원 성명",
-		c.bpoint as"사은포인트"
+create or replace view rentdetail as
+select to_char(a.rentdate, 'YYYY-MM-DD') as "rentdate",
+	a.num as "rentnum", 
+	c.num as "membernum", c.name as "membername",
+	b.rentprice - a.discount as "rentprice2",
+	b.num as "booknum", b.subject as "bookname"
 from rentlist a, booklist b, memberlist c
-where a.num = b.num and a.num = c.num;
+where a.booknum = b.num and a.membernum = c.num
+order by a.num desc;
 
+select * from rentdetail;
 
 --조인된 테이블에 계산식으로 필드를 생성할 수도 있음
 select a.rentdate as "대여일자", b.subject as "도서제목", c.name as "회원 성명",
