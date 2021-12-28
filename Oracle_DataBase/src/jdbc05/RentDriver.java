@@ -31,6 +31,7 @@ public class RentDriver {
 		}
 		System.out.println("프로그램을 종료합니다");
 	}
+	
 
 	private static void selectAll() {
 		RentDao rdao = RentDao.getInstance();
@@ -44,30 +45,28 @@ public class RentDriver {
 	}
 	
 	
-	
 	private static void delete() {
 		Scanner sc = new Scanner(System.in);		
 		RentDao rdao = RentDao.getInstance();
 		RentDto rdto = null;
 		// 수정할 대여번호 입력
-		System.out.print("삭제할 대여건의 number를 입력하세요: ");
+		System.out.print("삭제할 대여건의 번호를 입력하세요: ");
 		String input;
 		while(true) {
 			input = sc.nextLine();
-			if( input.equals("") ) System.out.println("number 입력은 필수입니다");
+			if( input.equals("") ) System.out.println("입력은 필수입니다");
 			else break;
 		}
 		int num = Integer.parseInt(input) ;
 		rdto = rdao.getRent(  num );
 		if( rdto == null ) {
-			System.out.println("삭제할 number가 없습니다");
+			System.out.println("삭제할 번호가 없습니다");
 			return;
 		}
 		rdao.delete(num);
 		System.out.println("삭제되었습니다");
 	}
 
-	
 	
 	private static void update() {
 		Scanner sc = new Scanner(System.in);		
@@ -77,15 +76,15 @@ public class RentDriver {
 		// 수정할 대여번호 입력
 		String input;
 		while(true) {
-			System.out.print("수정할 대여건의 number를 입력하세요: ");
+			System.out.print("수정할 대여건의 번호를 입력하세요: ");
 			input = sc.nextLine();
-			if( input.equals("") ) System.out.println("number 입력은 필수입니다");
+			if( input.equals("") ) System.out.println("입력은 필수입니다");
 			else break;
 		}
 		int num = Integer.parseInt(input) ;
 		rdto = rdao.getRent(  num );
 		if( rdto == null ) {
-			System.out.println("입력한 number 의 대여건이 없습니다");
+			System.out.println("입력한 번호의 대여건이 없습니다");
 			return;
 		}
 		
@@ -138,8 +137,9 @@ public class RentDriver {
 			if( result==1) System.out.println("수정 성공");
 			else System.out.println("수정 실패");
 			// to_date( ''||?||'' , 'YYYY-MM-DD')
-		
 	}
+	
+	
 	private static void insert() {
 		Scanner sc = new Scanner(System.in);		
 		RentDao rdao = RentDao.getInstance();
@@ -176,11 +176,11 @@ public class RentDriver {
 		rdto.setDiscount(discount);
 		
 		int result = rdao.insert(rdto);
-		if( result == 1 ) System.out.println("레코드 추가 성공");
-		else System.out.println("레코드 추가 실패");
-		
+		if( result == 1 ) System.out.println("추가 성공");
+		else System.out.println("추가 실패");
 	}
 
+	
 	private static void select() {
 		Scanner sc = new Scanner(System.in);		
 		RentDao rdao = RentDao.getInstance();
