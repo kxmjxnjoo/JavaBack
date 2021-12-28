@@ -120,7 +120,7 @@ public class RentDao {
 	public int update(RentDto rdto ){
 		int result = 0;
 		con = DBmanager.getConnection();	
-		String sql = "update rentlist set rentdate = to_date(''||?||'', 'YYYYMMDD') , "
+		String sql = "update rentlist set rentdate = to_date(''||?||'', 'YYYY-MM-DD') , "
 				+ " booknum =?,  membernum=?, discount=? where num=?";
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -134,9 +134,6 @@ public class RentDao {
 		} finally { 		DBmanager.close( con, pstmt, rs );  }
 		return result;
 	}
-	
-	
-	
 	public int delete(  int num ){
 		int result = 0;
 		con = DBmanager.getConnection();
@@ -150,7 +147,6 @@ public class RentDao {
 		return result;
 	}
 
-	
 
 	public boolean chehckBooknum(int booknum) {
 		boolean result = false;
