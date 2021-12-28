@@ -14,4 +14,6 @@ insert into customer values(5, '아무개', 'abc5@abc.com','010-5234-1234');
 
 select * from customer
 
+alter table rentlist rename column idx to num; 
+
 create sequence num_seq start with 7 increment by 1
