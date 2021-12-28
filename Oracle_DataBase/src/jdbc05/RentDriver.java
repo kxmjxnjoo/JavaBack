@@ -75,9 +75,9 @@ public class RentDriver {
 		RentDto rdto = null;
 		
 		// 수정할 대여번호 입력
-		System.out.print("수정할 대여건의 number를 입력하세요");
 		String input;
 		while(true) {
+			System.out.print("수정할 대여건의 number를 입력하세요: ");
 			input = sc.nextLine();
 			if( input.equals("") ) System.out.println("number 입력은 필수입니다");
 			else break;
@@ -90,55 +90,56 @@ public class RentDriver {
 		}
 		
 		// 수정할 대여날짜 입력
-		System.out.printf("대여일자 : %s\t수정할 날짜를 입력하세요 -> ", rdto.getRentdate());
+		System.out.printf("대여일자 : %s\t수정할 날짜를 입력하세요: ", rdto.getRentdate());
 		String rentdate = sc.nextLine();
 		if( !rentdate.equals("") ) rdto.setRentdate(rentdate);
 		
 		
 		// 대여하는 도서의 번호 입력
 		int booknum = 0;
-		System.out.printf("도서번호 : %d\t수정할 도서번호를 입력하세요 -> ", rdto.getBooknum());
+		
 		while(true) {
+			System.out.printf("도서번호 : %d\t수정할 도서번호를 입력하세요: ", rdto.getBooknum());
 			input = sc.nextLine();
-			if( input.equals("") ) break;
+			if( input.equals("") )  System.out.println("입력은 필수입니다");
 			else {
-				booknum = Integer.parseInt( sc.nextLine() );
-				boolean state = rdao.chehckBooknum( booknum );
+				booknum = Integer.parseInt( input );
+				boolean state = rdao.chehckBooknum(booknum );
 				if( state ) {
 					rdto.setBooknum(booknum);
+					System.out.println("변경되었습니다");
 					break;
-				} else System.out.printf("입력한 번호의 회원이 존재하지 않습니다. 다시입력하세요 -> ");
-			}
-		}	
-		// 대여하는 회원의 번호 입력
-		int membernum = 0;
-		System.out.printf("회원번호 : %d\t수정할 회원번호를 입력하세요 -> ", rdto.getMembernum());
-		while(true) {
-			input = sc.nextLine();
-			if( input.equals("") ) break;
-			else {
-				membernum = Integer.parseInt( sc.nextLine() );
-				boolean state = rdao.chehckMembernum( membernum );
-				if( state ) {
-					rdto.setMembernum(membernum);
-					break;
-				} else System.out.printf("입력한 번호의 회원이 존재하지 않습니다. 다시입력하세요 -> ");
+				} else System.out.printf("입력한 번호의 도서가 존재하지 않습니다. 다시입력하세요: ");
 			}
 		}
+			// 대여하는 회원의 번호 입력
+		int membernum = 0;
+			
+		while(true) {
+				System.out.printf("회원번호 : %d\t수정할 회원번호를 입력하세요: ", rdto.getMembernum());
+				input = sc.nextLine();
+				if( input.equals("") )  System.out.println("입력은 필수입니다");
+				else {
+					membernum = Integer.parseInt( input );
+					boolean state = rdao.chehckMembernum( membernum );
+					if( state ) {
+						rdto.setMembernum(membernum);
+						break;
+					} else System.out.printf("입력한 번호의 회원이 존재하지 않습니다. 다시입력하세요: ");
+				}
+			}
+			
+			// 할인금액 입력
+			System.out.print("수정할 할인금액을 입력하세요");
+			String discount = sc.nextLine();
+			if( !discount.equals("") ) rdto.setDiscount( Integer.parseInt(discount) );
+			
+			int result = rdao.update( rdto );
+			if( result==1) System.out.println("수정 성공");
+			else System.out.println("수정 실패");
+			// to_date( ''||?||'' , 'YYYY-MM-DD')
 		
-		// 할인금액 입력
-		System.out.print("수정할 할인금액을 입력하세요");
-		String discount = sc.nextLine();
-		if( !discount.equals("") ) rdto.setDiscount( Integer.parseInt(discount) );
-		
-		int result = rdao.update( rdto );
-		if( result==1) System.out.println("레코드 수정 성공");
-		else System.out.println("레코드 수정 실패");
-		// to_date( ''||?||'' , 'YYYY-MM-DD')
 	}
-	
-	
-	
 	private static void insert() {
 		Scanner sc = new Scanner(System.in);		
 		RentDao rdao = RentDao.getInstance();
@@ -158,7 +159,7 @@ public class RentDriver {
 		
 		// 대여하는 회원의 번호 입력
 		int membernum = 0;
-		System.out.printf("회원번호를 입력하세요 -> ");
+		System.out.printf("회원번호를 입력하세요: ");
 	while(true) {
 			membernum = Integer.parseInt( sc.nextLine() );
 			boolean state = rdao.chehckMembernum( membernum );
