@@ -11,10 +11,10 @@
 String age = request.getParameter("age");
 String name=(String) request.getAttribute("name");
 //Attribute에 저장형식은 모든 클래스의 부모 클래스인 Object 형태로 저장되므로
-//다시 값을 추출할 떄 강제 캐스팅이 필요함
+//다시 값을 추출할 때 강제 캐스팅이 필요함
 %>
 
-<h1>forwqrd 방식으로 이동된 페이지</h1>
+<h1>forward 방식으로 이동된 페이지</h1>
 <h1>나이 : <%= age %></h1>
 <h1>이름 : <%= name %></h1>
 
