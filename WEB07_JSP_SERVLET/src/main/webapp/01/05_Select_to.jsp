@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +10,7 @@
 String job = request.getParameter("job");
 String interests[] = request.getParameterValues("interest");
 %>
-<h1>당신이 선텍한 직업: <%=job %></h1>
+<h1>당신이 선택한 직업: <%=job %></h1>
 <br><br><br>
 <h1>당신이 선택한 관심분야</h1>
 <h1>
