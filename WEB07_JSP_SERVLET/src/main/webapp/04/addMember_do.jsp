@@ -21,7 +21,6 @@ String phone = request.getParameter("phone");
 //try catch  구문을 JDBC 에서 사용한 것처럼 사용해서 레코드를 추가해주세요
 
 try{
-	
 	Class.forName(driver);
 	con = DriverManager.getConnection(url, uid, pass);
 	
@@ -30,7 +29,6 @@ try{
 	pstmt.setString(2, name);
 	pstmt.setString(3, pwd);
 	pstmt.setString(4, phone);
-	
 	pstmt.executeUpdate();
 	
 } catch( Exception e){
