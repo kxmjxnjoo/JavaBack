@@ -116,3 +116,5 @@ select rownum as rn, b.* from
 alter table board add replycnt number(3) default 0;
 
 select * from board
+
+alter table board add imgfilename varchar2(50);

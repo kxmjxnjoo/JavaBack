@@ -11,7 +11,8 @@
 <body>
 <div id="wrap" align="center">
 <h1>게시글 수정</h1>
-<form name="frm" method="post" action="board.do?command=boardUpdate">
+<form name="frm" method="post" action="board.do?command=boardUpdate" enctype="multipart/form-data">
+<!-- <input type="hidden" name="command" value="boardUpdate"> -->
 <input type="hidden" name="num" value="${board.num}">
 <table>
 	<tr><th>작성자</th><td>${board.userid}
@@ -24,6 +25,21 @@
 		<td><input type="text" value="${board.title}" size="20" name="title">*</td></tr>
 	<tr>	<th>내용</th>
 		<td><textarea cols="70" rows="15" name="content">${board.content}</textarea>*</td></tr>
+	<tr>
+		<th>이미지</th>
+		<td>
+		<c:choose>
+			<c:when test="${empty board.imgfilename}">
+				<img src="images/noname.jpg" height="50"><br>
+			</c:when>
+			<c:otherwise>
+				<img src="images/${board.imgfilename}" height="50"><br>
+			</c:otherwise>
+		</c:choose> 
+		<input type="file" name="imgfilename"><br>파일을 수정하고자 할 때만 선택하세요
+		<input type="hidden" name="oldfilename" value="${board.imgfilename}">
+		</td>
+	</tr>
 </table><br>
 <input type="submit" value="수정" onClick="return boardCheck()">
 <input type="reset" value="다시 작성">
